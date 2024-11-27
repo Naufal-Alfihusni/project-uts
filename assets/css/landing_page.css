@@ -1,0 +1,857 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  height: auto;
+  background-color: #30e3ca;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+  transition: background-color 0.3s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+}
+
+.navbar > img {
+  width: 110px;
+  height: auto;
+}
+
+.navbar > ol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  gap: 15px;
+}
+
+.navbar ol li a {
+  text-decoration: none;
+  color: #40514e;
+  padding: 12px;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar > ol > li > a:hover {
+  background-color: #11999e;
+  color: #e4f9f5;
+}
+
+.navbar .login-button {
+  width: 140px;
+  height: 40px;
+  border-radius: 12px;
+  background-color: #30e3ca;
+  cursor: pointer;
+  font-weight: bolder;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 0 2px #40514e;
+  transition: all 0.4s;
+}
+
+.navbar .login-button:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 120%;
+  background-color: #11999e;
+  top: 50%;
+  transform: skewX(30deg) translate(-280%, -50%);
+  transition: all 0.5s;
+}
+
+.navbar .login-button:hover {
+  background-color: #e4f9f5;
+  box-shadow: 0 2px 0 2px #0d3b66;
+}
+
+.navbar .login-button:hover::before {
+  transform: skewX(30deg) translate(280%, -50%);
+  transition-delay: 0.1s;
+}
+
+.navbar .login-button:active {
+  transform: scale(0.9);
+}
+
+.navbar .login-button a {
+  width: 140px;
+  height: 40px;
+  color: #0d3b66;
+  text-decoration: none;
+  font-size: 17px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.navbar .login-button a:hover {
+  color: #40514e;
+}
+
+/* content */
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  flex: 1;
+  color: white;
+}
+
+main .nama_sekolah {
+  background-image: url("https://pbs.twimg.com/amplify_video_thumb/1722833640583991296/img/GPLcC21XhJgruRkE.jpg:large");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+main .nama_sekolah::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgb(48, 227, 202, 1) 1%,
+    rgba(0, 255, 208, 0) 22%
+  );
+}
+
+main .nama_sekolah h1 {
+  color: #30e3ca;
+  font-size: 60px;
+  text-align: center;
+  text-shadow: 5px 5px 10px black;
+}
+
+main .nama_sekolah > p {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  text-shadow: 2px 2px 10px black;
+}
+
+/* profile */
+main .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 100%;
+  height: 100vh;
+  margin-top: 80px;
+  gap: 20px;
+  color: #40514e;
+}
+
+main .about .profil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+main .about .profil .logo_sekolah {
+  width: 40%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid black; */
+}
+
+main .about .profil .logo_sekolah > img {
+  width: 400px;
+  height: auto;
+  /* border: 1px solid black; */
+}
+
+main .about .profil .deskripsi {
+  width: 50%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  /* border: 1px solid black; */
+}
+
+main .about .profil .deskripsi > h2 {
+  text-align: justify;
+  align-self: flex-start;
+  width: 600px;
+  /* border: 1px solid black; */
+}
+
+main .about .profil .deskripsi .teks_deskripsi {
+  text-align: justify;
+  align-self: flex-start;
+  font-size: 22px;
+  width: 600px;
+  /* border: 1px solid black; */
+}
+
+main .about .visi_misi {
+  width: 100%;
+  height: 200px;
+  /* border: 1px solid rgb(98, 255, 0); */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+main .about .visi_misi .visi {
+  /* border: 1px solid black; */
+  font-size: 22px;
+  width: 100%;
+  text-align: center;
+}
+
+main .about .visi_misi .misi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* border: 1px solid rgb(255, 0, 0); */
+  font-size: 22px;
+  list-style-position: inside;
+  width: 100%;
+}
+
+/* fasilitas */
+main .fasilitas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* border: 1px solid black; */
+  padding: 20px 0;
+  margin-top: 80px;
+  height: 100vh;
+  color: #40514e;
+}
+
+main .fasilitas .container_list_fasilitas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-position: inside;
+  /* border: 1px solid black; */
+  width: 46%;
+  height: 400px;
+}
+
+main .fasilitas .container_list_fasilitas .list_fasilitas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  font-size: 22px;
+}
+
+main .fasilitas .gambar_fasilitas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
+  width: 25%;
+  gap: 10px;
+}
+
+main .fasilitas .gambar_fasilitas > img {
+  width: 320px;
+  border: 5px solid white;
+  border-radius: 12px;
+}
+
+/* kegiatan */
+main .kegiatan {
+  width: 100%;
+  background-color: #e4f9f5;
+  color: #40514e;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  padding: 20px;
+  align-items: center;
+  margin-top: 80px;
+}
+
+main .kegiatan .wrapper {
+  width: 600px;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+  margin: auto;
+}
+
+main .kegiatan .wrapper .slides .images {
+  display: flex;
+  width: 100%;
+  transition: margin-left 2s ease-in-out;
+}
+
+main .kegiatan .wrapper .slides .images img {
+  width: 100%;
+}
+
+#slide-1:target ~ .images {
+  margin-left: 0px;
+}
+
+#slide-2:target ~ .images {
+  margin-left: -600px;
+}
+
+#slide-3:target ~ .images {
+  margin-left: -1200px;
+}
+
+#slide-4:target ~ .images {
+  margin-left: -1800px;
+}
+
+main .kegiatan .wrapper .dot-navigasi {
+  text-align: center;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin-top: -50px;
+}
+
+main .kegiatan .wrapper .dot-navigasi > a {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #40514e;
+  font-size: 0px;
+  border-radius: 50%;
+  margin: 2px;
+  transition: 0.3s ease-in;
+  text-decoration: none;
+}
+
+main .kegiatan .wrapper .dot-navigasi > a:hover {
+  background-color: #11999e;
+}
+
+#slide-1,
+#slide-2,
+#slide-3,
+#slide-4 {
+  display: none;
+}
+
+/* biaya pendaftaran */
+main .biaya {
+  width: 100%;
+  background-color: #e4f9f5;
+  height: 100vh;
+  color: #40514e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+main .biaya .biaya_pendaftaran {
+  /* border: 1px solid black; */
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+main .biaya .biaya_pendaftaran .biaya_awal {
+  height: 80px;
+  border-collapse: collapse;
+}
+
+main .biaya .biaya_pendaftaran .biaya_awal,
+.biaya_awal th,
+.biaya_awal td {
+  border: 2px solid #40514e;
+}
+
+main .biaya .biaya_pendaftaran .biaya_awal th {
+  text-align: left;
+  font-weight: normal;
+  width: 210px;
+  padding: 5px;
+}
+
+main .biaya .biaya_pendaftaran .biaya_awal td {
+  width: 260px;
+  height: 75px;
+  padding: 5px;
+}
+
+main .biaya .biaya_pendaftaran .biaya_awal td span {
+  font-size: 10px;
+}
+
+main .biaya .biaya_pendaftaran .diskon {
+  height: 80px;
+  border-collapse: collapse;
+}
+
+main .biaya .biaya_pendaftaran .diskon,
+.diskon th,
+.diskon td {
+  border: 2px solid #40514e;
+}
+
+main .biaya .biaya_pendaftaran .diskon th {
+  text-align: left;
+  font-weight: normal;
+  width: 200px;
+  padding: 5px;
+}
+
+main .biaya .biaya_pendaftaran .diskon td {
+  width: 260px;
+  height: 20px;
+  padding: 5px;
+}
+
+main .biaya .daftar_sekarang {
+  width: 280px;
+  height: 60px;
+  border-radius: 12px;
+  background-color: #30e3ca;
+  cursor: pointer;
+  font-weight: bolder;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 0 2px #40514e;
+  transition: all 0.4s;
+}
+
+main .biaya .daftar_sekarang:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 120%;
+  background-color: #11999e;
+  top: 50%;
+  transform: skewX(30deg) translate(-280%, -50%);
+  transition: all 0.5s;
+}
+
+main .biaya .daftar_sekarang:hover {
+  background-color: #e4f9f5;
+  box-shadow: 0 2px 0 2px #0d3b66;
+}
+
+main .biaya .daftar_sekarang:hover::before {
+  transform: skewX(30deg) translate(280%, -50%);
+  transition-delay: 0.1s;
+}
+
+main .biaya .daftar_sekarang:active {
+  transform: scale(0.9);
+}
+
+main .biaya .daftar_sekarang a {
+  width: 280px;
+  height: 60px;
+  color: #0d3b66;
+  text-decoration: none;
+  font-size: 17px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+
+main .biaya .daftar_sekarang a:hover {
+  color: #40514e;
+}
+
+/* kontak */
+main .kontak {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #e4f9f5;
+  color: #40514e;
+}
+
+main .kontak .container-list-kontak {
+  width: 550px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+main .kontak .container-list-kontak .container-list-telpon {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+main .kontak .container-list-kontak .container-list-telpon .telpon p {
+  display: flex;
+  gap: 5px;
+}
+
+main .kontak .container-list-kontak .container-list-telpon .alamat p {
+  display: flex;
+  gap: 5px;
+}
+
+main .kontak .container-list-kontak .sosial_media {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+main .kontak .container-list-kontak .sosial_media p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+/* profile pengembang */
+
+main .container-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120vh;
+  flex-direction: column;
+  padding: 80px 0px;
+  gap: 20px;
+  background-color: #40514e;
+}
+
+main .container-profile .biodata {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 500px;
+  height: 550px;
+  padding: 25px;
+  background-color: #e4f9f5;
+  color: #40514e;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px 4px #30e3ca;
+}
+
+main .container-profile .biodata .poto-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+main .container-profile .biodata .poto-profile img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid #40514e;
+}
+
+main .container-profile .biodata .data-pribadi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+main .container-profile .biodata .data-pribadi table {
+  margin-left: 33px;
+  height: 200px;
+  border-collapse: collapse;
+  /* border: 1px solid; */
+}
+
+main .container-profile .biodata .data-pribadi th {
+  text-align: left;
+  width: 140px;
+  border-right: 1px solid black;
+  padding: 5px;
+}
+
+main .container-profile .biodata .data-pribadi td {
+  text-align: left;
+  width: 164px;
+  padding: 8px;
+  border-left: 1px solid black;
+}
+
+main .container-profile .biodata .profile-sosial-media {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+main .container-profile .biodata .profile-sosial-media a {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  gap: 5px;
+  text-decoration: none;
+  color: #40514e;
+}
+
+/* form-pendaftaran */
+main .form-pendaftaran {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 80px;
+  color: #40514e;
+}
+
+main .form-pendaftaran .container-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  background-color: #e4f9f5;
+  width: 800px;
+  height: 670px;
+  border-radius: 15px;
+}
+
+main .form-pendaftaran form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+main .form-pendaftaran form table {
+  height: 420px;
+}
+
+main .form-pendaftaran form table th {
+  text-align: left;
+  width: 230px;
+  padding: 5px;
+}
+
+main .form-pendaftaran form table td {
+  width: 300px;
+  padding: 5px;
+}
+
+main .form-pendaftaran form table td input.input-text-number {
+  width: 300px;
+  padding: 5px;
+  height: 33px;
+  background-color: #e4f9f5;
+  border: 1px solid #40514e;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+main .form-pendaftaran form table td textarea {
+  width: 300px;
+  height: 50px;
+  padding: 5px;
+  background-color: #e4f9f5;
+  border: 1px solid #40514e;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+main .form-pendaftaran form table td input.input-text-number:focus,
+.form-pendaftaran form table td textarea:focus {
+  border-color: #11999e;
+  box-shadow: 0 0 5px #40514e;
+  outline: none;
+}
+
+.daftar {
+  align-items: center;
+  background-image: linear-gradient(144deg, #11999e, #30e3ca 50%, #e4f9f5);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #e4f9f5;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 200px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.daftar:active,
+.daftar:hover {
+  outline: 0;
+  color: #40514e;
+}
+
+.daftar span {
+  background-color: #40514e;
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+  font-weight: bolder;
+}
+
+.daftar:hover span {
+  background: none;
+}
+
+.daftar:active {
+  transform: scale(0.9);
+}
+
+/* footer */
+footer {
+  width: 100%;
+  height: 300px;
+  background-color: #11999e;
+  border-top: 2px solid #e4f9f5;
+  color: #e4f9f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 0;
+}
+
+footer .container-informasi {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-self: center;
+  list-style-position: inside;
+  gap: 60px;
+  margin-left: 88px;
+}
+
+footer .container-informasi .footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer .container-informasi .footer-menu h2,
+.footer-sosial-media h2 {
+  border-bottom: 1px solid #e4f9f5;
+}
+
+footer .container-informasi .footer-menu ul {
+  list-style-type: none;
+}
+
+footer .container-informasi .footer-menu ul > li > a {
+  text-decoration: none;
+  color: #e4f9f5;
+}
+
+footer .container-informasi .footer-sosial-media {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+footer .container-informasi .footer-sosial-media .list-sosial-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer .container-informasi .footer-sosial-media .list-sosial-media p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+footer .copyright {
+  padding: 0;
+  font-size: 15px;
+}
+
+footer .container-informasi .footer-telpon-alamat {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+footer .container-informasi .footer-telpon-alamat .footer-telpon,
+.footer-alamat {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+footer .container-informasi .footer-telpon-alamat .footer-telpon h2,
+.footer-alamat h2 {
+  border-bottom: 1px solid #e4f9f5;
+  width: 100px;
+}
