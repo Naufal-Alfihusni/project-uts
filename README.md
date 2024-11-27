@@ -21,3 +21,5 @@ credit:
 - cadehal channel (inpirasi login page)
 - dirumahrafif channel (template slider gambar)
 - uiverse.io (template button)
+
+test local aman
